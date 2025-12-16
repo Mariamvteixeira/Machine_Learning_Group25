@@ -1,0 +1,10 @@
+Abstract
+
+The rapid growth of Cars 4 You has increased the demand for faster vehicle price evaluations, creating the need for an automated and reliable pricing system. The objective of this project is to develop a machine learning regression model capable of predicting car prices based on user-provided vehicle characteristics.
+
+Using a dataset from 2020, we conducted a data exploration and preprocessing phase to identify missing values, outliers, and inconsistencies. A structured preprocessing strategy was designed, including mode for categorical features, median and KNN-based imputation for numerical ones, winsorization using the interquartile range to mitigate the impact of extreme values, rule-based constraints on the vehicle registration year, feature engineering, appropriate encoding of categorical variables (OneHot and Frequency Enconding) and to scaled numeric variables Standard Scaler. These steps were subsequently encapsulated into a unified scikit-learn Pipeline to ensure reproducibility and prevent data leakage.
+
+Multiple regression models were benchmarked using a fixed train–validation split, including linear models (Linear Regression, Ridge, Lasso, Elastic Net) and non-linear approaches (K-Nearest Neighbors, Decision Trees, Random Forests, Neural Networks, and Support Vector Regression). Model performance was primarily assessed using Mean Absolute Error (MAE), enabling a consistent comparison across approaches.
+
+The results indicate that Random Forest achieved the most stable and generalizable performance on the validation set, balancing predictive accuracy and model robustness. The final solution was deployed using the full preprocessing pipeline to generate predictions for unseen test data
+
